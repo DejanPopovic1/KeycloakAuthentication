@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "0pV6p5T8No8Q6G4/cycvbEaUMGpT22dJwTR7UaMZOeng0mZuJYVnGvHRC+rJUh1c+O1nV6aqiEKt+sc6cKpHEw==",
+  "success": true,
+  "projectFilePath": "C:\\Development\\CognitoCoreTest3\\CognitoCoreTest3\\CognitoCoreTest3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dejan\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.17\\microsoft.aspnetcore.authentication.openidconnect.5.0.17.nupkg.sha512",
+    "C:\\Users\\dejan\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\dejan\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.7.1\\microsoft.identitymodel.jsonwebtokens.6.7.1.nupkg.sha512",
+    "C:\\Users\\dejan\\.nuget\\packages\\microsoft.identitymodel.logging\\6.7.1\\microsoft.identitymodel.logging.6.7.1.nupkg.sha512",
+    "C:\\Users\\dejan\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.7.1\\microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
+    "C:\\Users\\dejan\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.7.1\\microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
+    "C:\\Users\\dejan\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.7.1\\microsoft.identitymodel.tokens.6.7.1.nupkg.sha512",
+    "C:\\Users\\dejan\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.7.1\\system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
+    "C:\\Users\\dejan\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "C:\\Users\\dejan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
