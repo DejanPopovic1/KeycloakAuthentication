@@ -37,7 +37,8 @@ namespace CognitoCoreTest3
                 options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
             })
-            .AddCookie()
+                //This is a redirect in the event that you are NOT authorized when hitting an Authorized endpoint
+            .AddCookie(options => { options.AccessDeniedPath = "/Home/Unauthorized"; })
             .AddOpenIdConnect(options =>
             {
                 //SEE:
@@ -101,6 +102,8 @@ namespace CognitoCoreTest3
             });
         }
 
+        //SEE:
+        //https://stackoverflow.com/questions/67322899/how-to-log-out-from-aws-cognito-in-asp-net-core
         Task OnRedirectToIdentityProviderForSignOut(RedirectContext context)
         {
             var configuration = context.HttpContext.RequestServices.GetRequiredService<IConfiguration>();

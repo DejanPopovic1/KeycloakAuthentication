@@ -25,6 +25,9 @@ namespace CognitoCoreTest3.Controllers
 
         public IActionResult Index()
         {
+            //See here to check whether user is actually authenticated:
+            //https://stackoverflow.com/a/30632819
+            bool isAuth = User.Identity.IsAuthenticated;
             return View();
         }
 
@@ -32,6 +35,7 @@ namespace CognitoCoreTest3.Controllers
         [Authorize(Roles = "CustomGroup3")]
         public IActionResult Protected()
         {
+
             //See:
             //https://repost.aws/questions/QUNPl2kcyqS3SdQKLHa3w8rQ/how-to-get-current-connected-cognito-user
             if (User != null)
@@ -80,6 +84,21 @@ namespace CognitoCoreTest3.Controllers
         {
             //return View();
             return Redirect("https://deantest.auth.eu-west-1.amazoncognito.com/oauth2/authorize?response_type=code&client_id=5oa5mm7hqqmpp7i1806mff97ug&redirect_uri=https://localhost:44357/");
+        }
+
+        //This is an added unauthorized endpoint
+        public IActionResult Unauthorized()
+        {
+            
+            return Content("<p>You dont have sufficient roles to access this page</p>", "text/html");
+            //return Redirect("https://deantest.auth.eu-west-1.amazoncognito.com/oauth2/authorize?response_type=code&client_id=5oa5mm7hqqmpp7i1806mff97ug&redirect_uri=https://localhost:44357/");
+        }
+
+        //This is an added unauthorized endpoint
+        public IActionResult RedirectToOtherApp()
+        {
+
+            return Redirect("https://localhost:44309/Home/About");
         }
 
         public async Task<IActionResult> Foo()
